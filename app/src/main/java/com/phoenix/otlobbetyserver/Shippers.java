@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Button;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
@@ -54,16 +55,27 @@ public class Shippers extends AppCompatActivity {
                 push
         ) {
             @Override
-            protected void populateViewHolder(ShippersViewHolder shippersViewHolder, Push model, int position) {
+            protected void populateViewHolder(ShippersViewHolder shippersViewHolder, Push model, final int position) {
                 shippersViewHolder.txtOrderID.setText(adapter.getRef(position).getKey());
                 shippersViewHolder.txtOrderID.setText(model.getIdnum());
                 shippersViewHolder.txtShipperId.setText(model.getName());
                 shippersViewHolder.txtShipperName.setText(model.getPhone());
 
+                shippersViewHolder.btnRemove.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        deleteOrder(adapter.getRef(position).getKey());
+                    }
+                });
             }
         };
         adapter.notifyDataSetChanged();
         recyclerView.setAdapter(adapter);
             }
+
+    private void deleteOrder(String key) {
+        push.child(key).removeValue();
+        adapter.notifyDataSetChanged();
+    }
 
 }

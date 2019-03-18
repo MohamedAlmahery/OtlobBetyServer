@@ -7,7 +7,9 @@
     android:layout_height="wrap_content"
     app:cardElevation="4dp"
     >
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <LinearLayout
         android:layout_margin="20dp"
         android:orientation="vertical"
@@ -61,5 +63,5 @@
 
         </LinearLayout>
     </LinearLayout>
-
+</ScrollView>
 </LinearLayout>

@@ -8,103 +8,109 @@
     app:cardElevation="4dp"
     >
 
-    <LinearLayout
-        android:layout_margin="20dp"
-        android:orientation="vertical"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.rengwuxian.materialedittext.MaterialEditText
-            android:id="@+id/edtName"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_gravity="top"
-            android:hint="Name"
-            android:gravity="center"
-            android:inputType="text"
-            android:textColorHint="@color/colorPrimary"
-            android:textSize="34sp"
-            app:met_baseColor="@color/colorPrimary"
-            app:met_floatingLabel="highlight"
-            app:met_primaryColor="@color/colorPrimary"
-            app:met_singleLineEllipsis="true" />
-        <com.rengwuxian.materialedittext.MaterialEditText
-            android:id="@+id/edtDescription"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_gravity="top"
-            android:hint="Description"
-            android:gravity="center"
-            android:inputType="textMultiLine"
-            android:textColorHint="@color/colorPrimary"
-            android:textSize="24sp"
-            app:met_baseColor="@color/colorPrimary"
-            app:met_floatingLabel="highlight"
-            app:met_primaryColor="@color/colorPrimary"
-            app:met_singleLineEllipsis="true" />
-        <com.rengwuxian.materialedittext.MaterialEditText
-            android:id="@+id/edtPrice"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_gravity="top"
-            android:hint="Price"
-            android:gravity="center"
-            android:inputType="numberDecimal"
-            android:textColorHint="@color/colorPrimary"
-            android:textSize="34sp"
-            app:met_baseColor="@color/colorPrimary"
-            app:met_floatingLabel="highlight"
-            app:met_primaryColor="@color/colorPrimary"
-            app:met_singleLineEllipsis="true" />
-        <com.rengwuxian.materialedittext.MaterialEditText
-            android:id="@+id/edtDiscount"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_gravity="top"
-            android:hint="Discount"
-            android:gravity="center"
-            android:inputType="text"
-            android:textColorHint="@color/colorPrimary"
-            android:textSize="34sp"
-            app:met_baseColor="@color/colorPrimary"
-            app:met_floatingLabel="highlight"
-            app:met_primaryColor="@color/colorPrimary"
-            app:met_singleLineEllipsis="true" />
-
-
-
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:weightSum="2"
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/btnSelect"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:text="SELECT"
-                android:textColor="@color/colorPrimaryDark"
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtName"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="top"
+                android:gravity="center"
+                android:hint="Name"
+                android:inputType="text"
+                android:textColorHint="@color/colorPrimary"
+                android:textSize="34sp"
+                app:met_baseColor="@color/colorPrimary"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/colorPrimary"
+                app:met_singleLineEllipsis="true" />
 
-                />
-            <Button
-                android:id="@+id/btnUpload"
-                android:layout_width="0dp"
-                android:layout_weight="1"
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtDescription"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="top"
+                android:gravity="center"
+                android:hint="Description"
+                android:inputType="textMultiLine"
+                android:textColorHint="@color/colorPrimary"
+                android:textSize="24sp"
+                app:met_baseColor="@color/colorPrimary"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/colorPrimary"
+                app:met_singleLineEllipsis="true" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtPrice"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="top"
+                android:gravity="center"
+                android:hint="Price"
+                android:inputType="numberDecimal"
+                android:textColorHint="@color/colorPrimary"
+                android:textSize="34sp"
+                app:met_baseColor="@color/colorPrimary"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/colorPrimary"
+                app:met_singleLineEllipsis="true" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edtDiscount"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="top"
+                android:gravity="center"
+                android:hint="Discount"
+                android:inputType="text"
+                android:textColorHint="@color/colorPrimary"
+                android:textSize="34sp"
+                app:met_baseColor="@color/colorPrimary"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/colorPrimary"
+                app:met_singleLineEllipsis="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:text="UPLOAD"
-                android:textColor="@color/colorPrimaryDark"
-                />
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/btnSelect"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:text="SELECT"
+                    android:textColor="@color/colorPrimaryDark"
+
+                    />
+
+                <Button
+                    android:id="@+id/btnUpload"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:text="UPLOAD"
+                    android:textColor="@color/colorPrimaryDark" />
+
+            </LinearLayout>
 
         </LinearLayout>
-    </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

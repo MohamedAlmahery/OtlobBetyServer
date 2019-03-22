@@ -119,6 +119,8 @@ public class food_list extends AppCompatActivity {
 
         btnSelect = add_menu_layout.findViewById(R.id.btnSelect);
         btnUpload = add_menu_layout.findViewById(R.id.btnUpload);
+
+
         btnSelect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -131,7 +133,6 @@ public class food_list extends AppCompatActivity {
                 UploadImage(); // Upload Image
             }
         });
-
         alertDialog.setView(add_menu_layout);
         alertDialog.setIcon(R.drawable.ic_shopping_cart_black_24dp);
 
@@ -140,12 +141,10 @@ public class food_list extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
-                if (newFood != null)
-                {
+                if (newFood != null) {
                     foodList.push().setValue(newFood);
 
                 }
-
             }
         });
         alertDialog.setNegativeButton("NO", new DialogInterface.OnClickListener() {
@@ -163,7 +162,6 @@ public class food_list extends AppCompatActivity {
         intent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(Intent.createChooser(intent,"Select Picture"), Common.PICK_IMAGE_REQUEST);
     }
-
 
     private void UploadImage() {
         if(saveUri != null)
@@ -213,8 +211,6 @@ public class food_list extends AppCompatActivity {
         }
     }
 
-
-
     private void loadListFood(String categoryId) {
         adapter = new FirebaseRecyclerAdapter<Food, FoodViewHolder>(
                 Food.class,
@@ -250,8 +246,6 @@ public class food_list extends AppCompatActivity {
             btnSelect.setText("Image Selectes !");
         }
     }
-
-
 
     @Override
     public boolean onContextItemSelected(MenuItem item) {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
@@ -7,72 +7,59 @@
     android:layout_height="wrap_content"
     app:cardElevation="4dp"
     >
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="20dp"
             android:orientation="vertical">
-
             <com.rengwuxian.materialedittext.MaterialEditText
                 android:id="@+id/edtName"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="top"
                 android:gravity="center"
                 android:hint="Name"
                 android:inputType="text"
                 android:textColorHint="@color/colorPrimary"
-                android:textSize="34sp"
                 app:met_baseColor="@color/colorPrimary"
                 app:met_floatingLabel="highlight"
                 app:met_primaryColor="@color/colorPrimary"
                 app:met_singleLineEllipsis="true" />
-
             <com.rengwuxian.materialedittext.MaterialEditText
                 android:id="@+id/edtDescription"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="top"
                 android:gravity="center"
                 android:hint="Description"
                 android:inputType="textMultiLine"
                 android:textColorHint="@color/colorPrimary"
-                android:textSize="24sp"
                 app:met_baseColor="@color/colorPrimary"
                 app:met_floatingLabel="highlight"
                 app:met_primaryColor="@color/colorPrimary"
                 app:met_singleLineEllipsis="true" />
-
             <com.rengwuxian.materialedittext.MaterialEditText
                 android:id="@+id/edtPrice"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="top"
                 android:gravity="center"
                 android:hint="Price"
                 android:inputType="numberDecimal"
                 android:textColorHint="@color/colorPrimary"
-                android:textSize="34sp"
                 app:met_baseColor="@color/colorPrimary"
                 app:met_floatingLabel="highlight"
                 app:met_primaryColor="@color/colorPrimary"
                 app:met_singleLineEllipsis="true" />
-
             <com.rengwuxian.materialedittext.MaterialEditText
                 android:id="@+id/edtDiscount"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="top"
                 android:gravity="center"
                 android:hint="Discount"
                 android:inputType="text"
                 android:textColorHint="@color/colorPrimary"
-                android:textSize="34sp"
                 app:met_baseColor="@color/colorPrimary"
                 app:met_floatingLabel="highlight"
                 app:met_primaryColor="@color/colorPrimary"
@@ -82,35 +69,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:weightSum="2">
-
+                >
                 <Button
                     android:id="@+id/btnSelect"
-                    android:layout_width="0dp"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_weight="1"
                     android:text="SELECT"
                     android:textColor="@color/colorPrimaryDark"
-
                     />
-
                 <Button
                     android:id="@+id/btnUpload"
-                    android:layout_width="0dp"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_weight="1"
                     android:text="UPLOAD"
                     android:textColor="@color/colorPrimaryDark" />
-
             </LinearLayout>
 
         </LinearLayout>
-    </ScrollView>
-
-</LinearLayout>
+</ScrollView>
